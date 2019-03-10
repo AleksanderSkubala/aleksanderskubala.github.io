@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6,5],{141:function(o,r,i){"use strict";i.r(r);r.default={white:"#FFFFFF",primary:"#3EC2E9",dark:"#0F1C21",pink:"pink",coral:"coral"}},142:function(o,r,i){"use strict";i.r(r);var n={colors:i(141).colors,fonts:{thin:300,regular:400,semiBold:"600",bold:800}};r.default=n}}]);
+//# sourceMappingURL=component---src-pages-utils-theme-js-acb81ccbae111bf6aec0.js.map
