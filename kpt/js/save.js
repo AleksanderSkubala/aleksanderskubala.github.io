@@ -1,21 +1,27 @@
-const save = function (data){
+const save = function (data, oldData){
     var get = window.localStorage.getItem('konspekty');
-    window.localStorage.clear();
 
     if(!get) {
         window.localStorage.setItem('konspekty', JSON.stringify({konspekty: []}));
         save();
-    } else if(data) {
+    } else if(oldData && data) {
         get = JSON.parse(get);
-        get.konspekty.filter((value)=>{
-            return value.title != data.title;
-        });
+        var index = get.konspekty.indexOf(oldData);
+
+        get.konspekty.splice(index, 1);
         get.konspekty.unshift(data);
+
         get.konspekty.slice(0, 9);
         get = JSON.stringify(get);
         window.localStorage.setItem('konspekty', get);
+    } else if( !oldData && data ) {
+        get = JSON.parse(get);
+
+        get.konspekty.unshift(data);
+        get = JSON.stringify(get);
+        window.localStorage.setItem('konspekty', get);
     } else {
-        console.error('You have to push data!!!');
+        console.error('You have to push any data!!!');
     }
 };
 
