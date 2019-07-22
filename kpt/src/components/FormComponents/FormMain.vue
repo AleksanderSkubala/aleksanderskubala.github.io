@@ -1342,7 +1342,6 @@ ul.ui.list li:before{
         width: 65%;
         margin: auto;
         margin-bottom: 15px;
-        border-bottom: 1px solid;
 
         #footer {
             font-size: 0.95em;
